@@ -1,6 +1,10 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    kotlin("kapt")
+    id("com.google.gms.google-services")
+    id ("com.google.dagger.hilt.android")
+
 }
 
 android {
@@ -63,6 +67,26 @@ dependencies {
     implementation("com.airbnb.android:lottie-compose:6.4.0")
     //navigation
     implementation("androidx.navigation:navigation-compose:2.7.7")
+
+    //Icons
+    implementation("androidx.compose.material:material-icons-extended:1.6.3")
+
+    //firebase
+    implementation(platform("com.google.firebase:firebase-bom:32.7.4"))
+    implementation("com.google.firebase:firebase-analytics")
+    //Authentication
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.android.gms:play-services-auth:21.0.0")
+
+// ViewModel
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+// ViewModel utilities for Compose
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
+
+    implementation ("com.google.dagger:hilt-android:2.50")
+    kapt ("com.google.dagger:hilt-compiler:2.50")
+    implementation ("androidx.hilt:hilt-navigation-compose:1.2.0")
+
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

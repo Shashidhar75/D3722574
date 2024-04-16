@@ -11,6 +11,12 @@ import uk.ac.tees.mad.d3722574.ui.presentation.SplashDestination
 import uk.ac.tees.mad.d3722574.ui.presentation.SplashScreen
 import uk.ac.tees.mad.d3722574.ui.presentation.homescreen.HomeDestination
 import uk.ac.tees.mad.d3722574.ui.presentation.homescreen.HomeScreen
+import uk.ac.tees.mad.d3722574.ui.presentation.loginscreen.LoginDestination
+import uk.ac.tees.mad.d3722574.ui.presentation.loginscreen.LoginScreen
+import uk.ac.tees.mad.d3722574.ui.presentation.signupscreen.SignupDestination
+import uk.ac.tees.mad.d3722574.ui.presentation.signupscreen.SignupScren
+import uk.ac.tees.mad.d3722574.ui.presentation.welcomescreen.WelcomeDestination
+import uk.ac.tees.mad.d3722574.ui.presentation.welcomescreen.WelcomeScreen
 
 @Composable
 fun SoloTravelNavigation() {
@@ -23,13 +29,47 @@ fun SoloTravelNavigation() {
                 onAnimationFinish = {
                     scope.launch(Dispatchers.Main) {
                         navController.popBackStack()
-                        navController.navigate(HomeDestination.routeName)
+                        navController.navigate(WelcomeDestination.routeName)
                     }
                 }
             )
         }
+        composable(LoginDestination.routeName){
+            LoginScreen(onNavigateToHomeScreen = {
+                navController.popBackStack()
+                navController.navigate(HomeDestination.routeName)
+            }, onNavigateToRegistration = {
+                navController.navigate(SignupDestination.routeName)
+            })
+        }
+        composable(SignupDestination.routeName){
+            SignupScren(onHomeScreen = {
+                navController.popBackStack()
+                navController.navigate(HomeDestination.routeName)
+
+            }, onNavigateToLogin = {
+                navController.navigate(LoginDestination.routeName)
+
+            })
+        }
+
+        composable(WelcomeDestination.routeName){
+            WelcomeScreen(onLoginScreen = {
+                navController.navigate(LoginDestination.routeName)
+            }, onNavigateToHomeScreen = {
+                navController.popBackStack()
+                navController.navigate(HomeDestination.routeName)
+            }, onSignUpScreen = {
+                navController.navigate(SignupDestination.routeName)
+
+            }
+            )
+        }
         composable(HomeDestination.routeName) {
-            HomeScreen()
+            HomeScreen(onNavigateToWelcomeScren = {
+                navController.popBackStack()
+                navController.navigate(WelcomeDestination.routeName)
+            })
         }
     }
 }

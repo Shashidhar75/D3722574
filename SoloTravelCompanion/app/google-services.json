@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "829815412215",
+    "project_id": "solo-travel-companion",
+    "storage_bucket": "solo-travel-companion.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:829815412215:android:a13212f4bf8f4cb7028af2",
+        "android_client_info": {
+          "package_name": "uk.ac.tees.mad.d3722574"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "829815412215-9qfo4nr06r9o4gn93cru93q2ql5jcjnt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "uk.ac.tees.mad.d3722574",
+            "certificate_hash": "de8ebde9afa24f7a888779a3097994b92c85c1bd"
+          }
+        },
+        {
+          "client_id": "829815412215-v96lars2681ir2j4ug2p85aabtolgcfn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "uk.ac.tees.mad.d3722574",
+            "certificate_hash": "052dc750ff3ddcc1955b3289465572cce96115ce"
+          }
+        },
+        {
+          "client_id": "829815412215-4u34mponcbpk9amrsmtrkho5b7cq5pbe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7KvCYIowBhC3C1KAQu5ujZDy9Xqtwrig"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "829815412215-4u34mponcbpk9amrsmtrkho5b7cq5pbe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
