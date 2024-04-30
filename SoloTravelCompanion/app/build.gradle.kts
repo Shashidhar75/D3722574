@@ -1,8 +1,8 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    alias(libs.plugins.google.gms.google.services)
     kotlin("kapt")
-    id("com.google.gms.google-services")
     id ("com.google.dagger.hilt.android")
 
 }
@@ -64,28 +64,42 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     //lottie
-    implementation("com.airbnb.android:lottie-compose:6.4.0")
+    implementation(libs.lottie.compose)
     //navigation
-    implementation("androidx.navigation:navigation-compose:2.7.7")
+    implementation(libs.androidx.navigation.compose)
 
     //Icons
-    implementation("androidx.compose.material:material-icons-extended:1.6.3")
+    implementation(libs.androidx.material.icons.extended)
 
     //firebase
-    implementation(platform("com.google.firebase:firebase-bom:32.7.4"))
-    implementation("com.google.firebase:firebase-analytics")
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.analytics)
     //Authentication
-    implementation("com.google.firebase:firebase-auth")
-    implementation("com.google.android.gms:play-services-auth:21.0.0")
+    implementation(libs.firebase.auth)
+
+    implementation (libs.firebase.firestore)
+    implementation (libs.firebase.storage)
+
+    implementation(libs.play.services.auth)
 
 // ViewModel
-    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+    implementation (libs.androidx.lifecycle.viewmodel.ktx)
 // ViewModel utilities for Compose
-    implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
+    implementation (libs.androidx.lifecycle.viewmodel.compose)
 
-    implementation ("com.google.dagger:hilt-android:2.50")
-    kapt ("com.google.dagger:hilt-compiler:2.50")
-    implementation ("androidx.hilt:hilt-navigation-compose:1.2.0")
+    implementation (libs.hilt.android)
+    kapt (libs.hilt.compiler)
+    implementation (libs.androidx.hilt.navigation.compose)
+
+    implementation(libs.coil.compose)
+
+    implementation(libs.play.services.maps)
+    implementation(libs.play.services.location)
+    implementation(libs.maps.ktx)
+    implementation(libs.maps.compose)
+
+    implementation (libs.retrofit)
+    implementation (libs.converter.gson)
 
 
     testImplementation(libs.junit)
