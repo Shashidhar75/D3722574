@@ -55,6 +55,7 @@ import uk.ac.tees.mad.d3722574.R
 import uk.ac.tees.mad.d3722574.data.Destination
 import uk.ac.tees.mad.d3722574.data.TravelDetails
 import uk.ac.tees.mad.d3722574.navigation.NavigationDestination
+import uk.ac.tees.mad.d3722574.ui.presentation.NewsDestination
 import uk.ac.tees.mad.d3722574.ui.presentation.profilescreen.ProfileDestination
 import uk.ac.tees.mad.d3722574.ui.presentation.travel.AddTravelDestination
 import uk.ac.tees.mad.d3722574.viewmodel.HomeViewModel
@@ -183,8 +184,10 @@ fun HomeScreen(viewModel: HomeViewModel, navController: NavController) {
                 navigationIcon = {
                     Icon(
                         tint = colorResource(id = R.color.white),
-                        modifier = Modifier.padding(start = 8.dp),
-                        painter = painterResource(id = R.drawable.baseline_account_circle_24),
+                        modifier = Modifier.padding(start = 8.dp).clickable {
+                            navController.navigate(NewsDestination.routeName)
+                        },
+                        painter = painterResource(id = R.drawable.baseline_newspaper_24),
                         contentDescription = ""
                     )
                 },
