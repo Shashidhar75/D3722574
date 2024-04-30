@@ -98,9 +98,6 @@ dependencies {
     implementation(libs.maps.ktx)
     implementation(libs.maps.compose)
 
-    implementation (libs.retrofit)
-    implementation (libs.converter.gson)
-
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

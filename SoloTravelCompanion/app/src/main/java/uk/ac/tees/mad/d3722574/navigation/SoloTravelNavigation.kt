@@ -10,8 +10,6 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import uk.ac.tees.mad.d3722574.ui.presentation.NewsDestination
-import uk.ac.tees.mad.d3722574.ui.presentation.NewsScreen
 import uk.ac.tees.mad.d3722574.ui.presentation.homescreen.DestinationDestination
 import uk.ac.tees.mad.d3722574.ui.presentation.homescreen.DestinationScreen
 import uk.ac.tees.mad.d3722574.ui.presentation.homescreen.HomeDestination
@@ -115,10 +113,6 @@ fun SoloTravelNavigation() {
 
         composable(MyTravelDestination.routeName) {
             MyTravels(navController)
-        }
-
-        composable(NewsDestination.routeName) {
-            NewsScreen(navController)
         }
     }
 }

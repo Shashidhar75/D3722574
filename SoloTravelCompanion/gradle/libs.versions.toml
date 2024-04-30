@@ -22,8 +22,6 @@ mapsCompose = "4.3.3"
 mapsKtx = "5.0.0"
 playServicesLocation = "21.2.0"
 googleGmsGoogleServices = "4.4.1"
-converterGson = "2.9.0"
-retrofit = "2.9.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -60,9 +58,6 @@ maps-compose = {module = "com.google.maps.android:maps-compose",version.ref = "m
 maps-ktx = {module = "com.google.maps.android:maps-ktx",version.ref = "mapsKtx"}
 play-services-location = {module = "com.google.android.gms:play-services-location",version.ref = "playServicesLocation"}
 play-services-maps = {module = "com.google.android.gms:play-services-maps",version.ref = "playServicesMaps"}
-
-retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
-converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
 
 
 [plugins]
